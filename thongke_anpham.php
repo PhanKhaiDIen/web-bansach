@@ -8,7 +8,7 @@
 	<div class = "col-sm-6">
 		<?php
 			//1 - Viết câu truy vấn
-			$sql = "SELECT c.Name, count(b.ISBN) SoLuong FROM books b, categories c WHERE b.CategoryID = c.CategoryID GROUP BY c.CategoryID";
+			$sql = "SELECT c.Name, count(b.ISBN) SoLuong FROM books b, categories c WHERE b.CategoryID = c.CategoryID GROUP BY c.CategoryID, c.Name";
 			//echo $sql;
 			//2 - Thực thi và hiển thị kết quả
 			$result = $conn->query($sql);
