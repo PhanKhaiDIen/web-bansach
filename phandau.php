@@ -111,8 +111,8 @@ include_once("connect.php");?>
 	<!-- thiết kế logo và nút tìm kiếm-->
 			<div class="row align-items-center">
 				<div class="col">
-					<a target="#" href="https://www.tvu.edu.vn/">
-						<img width="70" height="70" src="images/logo.jpg" alt="TRƯỜNG ĐHTV">
+					<a target="#" href="https://giaothongvantaitphcm.edu.vn/">
+						<img width="70" height="70" src="images/logo.jpg" alt="TRƯỜNG ĐH GTVT">
 					</a>
 				</div>
 			<div class="col">
