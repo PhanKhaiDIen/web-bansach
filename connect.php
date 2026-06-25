@@ -1,7 +1,7 @@
 <?php
 	//Khai báo các biến
 	$servername = "bookstore-db.mysql.database.azure.com";
-	$username = "bookadmin@bookstore-db";
+	$username = "bookadmin";
 	$password = "Dien2522005@";
 	$dbname = "db_bookstore";
 	
