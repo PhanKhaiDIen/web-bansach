@@ -1,8 +1,8 @@
 <?php
 	//Khai báo các biến
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	$servername = "bookstore-db.mysql.database.azure.com";
+	$username = "bookadmin@bookstore-db";
+	$password = "Dien2522005@";
 	$dbname = "db_bookstore";
 	
 	//Tạo kết nối

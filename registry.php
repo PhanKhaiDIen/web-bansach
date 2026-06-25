@@ -60,7 +60,7 @@
 			
 		?>
 	 </select>
-	 <?phpecho $sql;?>
+	 <?php echo $sql;?>
     </div>
 	-->
 	<button type="submit" class="btn btn-primary" name = "sbDangKy">Tạo tài khoản</button>
