@@ -47,12 +47,12 @@ if (isset($_POST['idToken'])) {
                 $conn->query("UPDATE accounts SET firebase_uid = '$uid' WHERE Username = '$email'");
             }
 
-            $_SESSION["Name"] = $userRow["Name"];
-            $_SESSION["Role"] = $userRow["Role"]; // Giữ nguyên phân quyền cũ của tài khoản
+            $_SESSION["Name"] = $userRow["Username"];
+            $_SESSION["Role"] = $userRow["RoleID"]; // Giữ nguyên phân quyền cũ của tài khoản
         } else {
             // NẾU LÀ TÀI KHOẢN MỚI TOANH: Tự động đăng ký thêm thành viên mới vào bảng MySQL
             // Mặc định cài mật khẩu ẩn, Role = 0 (khách hàng bình thường)
-            $insertSql = "INSERT INTO accounts (Username, Password, Name, Role, firebase_uid) 
+            $insertSql = "INSERT INTO accounts (Username, Pass, Username, RoleID, firebase_uid) 
                           VALUES ('$email', 'firebase_auth_protected', '$name', 0, '$uid')";
             
             if ($conn->query($insertSql) === TRUE) {
