@@ -52,8 +52,8 @@ if (isset($_POST['idToken'])) {
         } else {
             // NẾU LÀ TÀI KHOẢN MỚI TOANH: Tự động đăng ký thêm thành viên mới vào bảng MySQL
             // Mặc định cài mật khẩu ẩn, Role = 0 (khách hàng bình thường)
-            $insertSql = "INSERT INTO accounts (Username, Pass, Username, RoleID, firebase_uid) 
-                          VALUES ('$email', 'firebase_auth_protected', '$name', 0, '$uid')";
+            $insertSql = "INSERT INTO accounts (Username, Pass, RoleID, firebase_uid) 
+              VALUES ('$email', 'firebase_auth_protected', 0, '$uid')";
             
             if ($conn->query($insertSql) === TRUE) {
                 $_SESSION["Name"] = $name;
