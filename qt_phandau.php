@@ -42,7 +42,7 @@ $sold_this_month = mysqli_fetch_assoc($r)['sold'] ?? 0;
 
 // 10 đơn hàng gần nhất
 $recent_orders = mysqli_query($conn, "
-    SELECT o.OrderID, a.Name as CustomerName, o.Amount, o.DateTran
+    SELECT o.OrderID, a.Username as CustomerName, o.Amount, o.DateTran
     FROM orders o
     LEFT JOIN accounts a ON o.AccountID = a.AccountID
     ORDER BY o.DateTran DESC, o.OrderID DESC
